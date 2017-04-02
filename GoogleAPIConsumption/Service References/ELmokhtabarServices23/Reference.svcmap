@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3d24e94-30c1-4173-8514-6dc2f210ec03" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://mobresults.almokhtabar.com:88/service/ElmokhtabarService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2083bd49-b9b4-4db5-8bbe-52b129126e80" SourceId="1" SourceUrl="https://mobresults.almokhtabar.com:88/service/ElmokhtabarService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1723ff78-53b9-474b-8e53-7bc510cdb717" SourceId="1" SourceUrl="https://mobresults.almokhtabar.com:88/service/ElmokhtabarService.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="43f5a63f-951a-42fd-a09d-a8a9a2e06e18" SourceId="1" SourceUrl="https://mobresults.almokhtabar.com:88/service/ElmokhtabarService.svc/mex" />
+    <MetadataFile FileName="Kryptonworx.ElMokhtabar.UI.Service.DataContracts.xsd" MetadataType="Schema" ID="4c9b004b-491b-4f6b-93d0-50fa7bacef3b" SourceId="1" SourceUrl="https://mobresults.almokhtabar.com:88/service/ElmokhtabarService.svc/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="04d3b034-1bed-4f6f-9c8d-5eb857479ddd" SourceId="1" SourceUrl="https://mobresults.almokhtabar.com:88/service/ElmokhtabarService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ElMokhtabarService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" />
+      <xsd:import schemaLocation="" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IElMokhtabarService_Registeration_InputMessage">
+    <wsdl:part name="parameters" element="tns:Registeration" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_Registeration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_RegisterationFB_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationFB" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_RegisterationFB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterationFBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_TestLibrary_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestLibrary" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_TestLibrary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestLibraryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_VerifyWebLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyWebLogin" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_VerifyWebLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyWebLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_UserVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserVerify" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_UserVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_LoginFB_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginFB" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_LoginFB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginFBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ForgetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForgetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ForgetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForgetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ResetBadgeCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetBadgeCounter" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ResetBadgeCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetBadgeCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_BranchList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BranchList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_BranchList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BranchListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_BranchGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:BranchGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_BranchGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BranchGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsCategoryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsCategoryGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsCategoryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsCategoryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthTipsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthTipsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HomeVisitReserve_InputMessage">
+    <wsdl:part name="parameters" element="tns:HomeVisitReserve" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HomeVisitReserve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HomeVisitReserveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_PromotionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:PromotionList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_PromotionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PromotionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_PromotionGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PromotionGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_PromotionGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PromotionGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_NewsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewsList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_NewsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_NewsGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewsGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_NewsGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewsGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_TestResultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestResultList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_TestResultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CorporateTestResultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CorporateTestResultList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CorporateTestResultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorporateTestResultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CorporateDetailsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CorporateDetailsList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CorporateDetailsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorporateDetailsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_TestResultGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestResultGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_TestResultGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResultGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_SendTestResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendTestResult" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_SendTestResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendTestResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CountryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountryList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CountryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CountryGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CountryGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CountryGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CountryGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ProvinceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProvinceList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ProvinceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProvinceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ProvinceGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProvinceGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ProvinceGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProvinceGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_AreaList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AreaList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_AreaList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AreaListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_AreaGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AreaGet" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_AreaGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AreaGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_PatientTestResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:PatientTestResults" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_PatientTestResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PatientTestResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GetPrecautions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrecautions" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GetPrecautions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPrecautionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_IsUpdated_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUpdated" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_IsUpdated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUpdatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GetNotifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotifications" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GetNotifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_UpdateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToken" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_UpdateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_UpdateNotificationStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotificationStatus" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_UpdateNotificationStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNotificationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ResetDeviceBadge_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetDeviceBadge" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_ResetDeviceBadge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetDeviceBadgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_AddNewNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewNotification" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_AddNewNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GenerateCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCode" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GenerateCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DeleteTestAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTestAccount" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DeleteTestAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTestAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthAwarenessCampaignList_InputMessage">
+    <wsdl:part name="parameters" element="tns:HealthAwarenessCampaignList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_HealthAwarenessCampaignList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HealthAwarenessCampaignListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_NewsletterList_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewsletterList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_NewsletterList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewsletterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CorporateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CorporateList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_CorporateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorporateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetRegisteredData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetRegisteredData" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetRegisteredData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetRegisteredDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpdateRegisteredData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpdateRegisteredData" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpdateRegisteredData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpdateRegisteredDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpdatePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpdatePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpdateProfileRegisteredData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpdateProfileRegisteredData" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpdateProfileRegisteredData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpdateProfileRegisteredDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSetUserDiabetes_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSetUserDiabetes" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSetUserDiabetes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSetUserDiabetesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetDiabetesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetDiabetesList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetDiabetesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetDiabetesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSelectedDiabetesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSelectedDiabetesList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSelectedDiabetesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSelectedDiabetesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetPatientPoints_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetPatientPoints" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetPatientPoints_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetPatientPointsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendInquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendInquiry" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendInquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoUpload" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GetTests_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTests" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_GetTests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoPatientTestResultsReciept_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoPatientTestResultsReciept" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoPatientTestResultsReciept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoPatientTestResultsRecieptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetClientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetClientList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetClientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetClientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetCompaniesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetCompaniesList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetCompaniesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetCompaniesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetChemistCompaniesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetChemistCompaniesList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetChemistCompaniesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetChemistCompaniesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetChemistTariffList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetChemistTariffList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetChemistTariffList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetChemistTariffListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetChemistTestList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetChemistTestList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetChemistTestList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetChemistTestListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetTestPricesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetTestPricesList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetTestPricesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetTestPricesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetVisitDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetVisitDetails" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetVisitDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetVisitDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetBranchesVisits_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetBranchesVisits" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetBranchesVisits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetBranchesVisitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendPatientInquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendPatientInquiry" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendPatientInquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendPatientInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetMessageReplyDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetMessageReplyDetails" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetMessageReplyDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetMessageReplyDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetVisitMessagesList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetVisitMessagesList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetVisitMessagesList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetVisitMessagesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoVisitTestResultList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoVisitTestResultList" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoVisitTestResultList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoVisitTestResultListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetThreads_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetThreads" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetThreads_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetThreadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetThreadMessagess_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetThreadMessagess" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoGetThreadMessagess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoGetThreadMessagessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendMessage" />
+  </wsdl:message>
+  <wsdl:message name="IElMokhtabarService_DoSendMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoSendMessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IElMokhtabarService">
+    <wsdl:operation name="Registeration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/Registeration" message="tns:IElMokhtabarService_Registeration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/RegisterationResponse" message="tns:IElMokhtabarService_Registeration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterationFB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/RegisterationFB" message="tns:IElMokhtabarService_RegisterationFB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/RegisterationFBResponse" message="tns:IElMokhtabarService_RegisterationFB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestLibrary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/TestLibrary" message="tns:IElMokhtabarService_TestLibrary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/TestLibraryResponse" message="tns:IElMokhtabarService_TestLibrary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyWebLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/VerifyWebLogin" message="tns:IElMokhtabarService_VerifyWebLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/VerifyWebLoginResponse" message="tns:IElMokhtabarService_VerifyWebLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/UserVerify" message="tns:IElMokhtabarService_UserVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/UserVerifyResponse" message="tns:IElMokhtabarService_UserVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginFB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/LoginFB" message="tns:IElMokhtabarService_LoginFB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/LoginFBResponse" message="tns:IElMokhtabarService_LoginFB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/Login" message="tns:IElMokhtabarService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/LoginResponse" message="tns:IElMokhtabarService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/Logout" message="tns:IElMokhtabarService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/LogoutResponse" message="tns:IElMokhtabarService_Logout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForgetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/ForgetPassword" message="tns:IElMokhtabarService_ForgetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/ForgetPasswordResponse" message="tns:IElMokhtabarService_ForgetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/ResetPassword" message="tns:IElMokhtabarService_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/ResetPasswordResponse" message="tns:IElMokhtabarService_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetBadgeCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/ResetBadgeCounter" message="tns:IElMokhtabarService_ResetBadgeCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/ResetBadgeCounterResponse" message="tns:IElMokhtabarService_ResetBadgeCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BranchList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/BranchList" message="tns:IElMokhtabarService_BranchList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/BranchListResponse" message="tns:IElMokhtabarService_BranchList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BranchGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/BranchGet" message="tns:IElMokhtabarService_BranchGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/BranchGetResponse" message="tns:IElMokhtabarService_BranchGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthTipsCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsCategoryList" message="tns:IElMokhtabarService_HealthTipsCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsCategoryListResponse" message="tns:IElMokhtabarService_HealthTipsCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthTipsCategoryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsCategoryGet" message="tns:IElMokhtabarService_HealthTipsCategoryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsCategoryGetResponse" message="tns:IElMokhtabarService_HealthTipsCategoryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthTipsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsList" message="tns:IElMokhtabarService_HealthTipsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsListResponse" message="tns:IElMokhtabarService_HealthTipsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthTipsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsGet" message="tns:IElMokhtabarService_HealthTipsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthTipsGetResponse" message="tns:IElMokhtabarService_HealthTipsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HomeVisitReserve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/HomeVisitReserve" message="tns:IElMokhtabarService_HomeVisitReserve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/HomeVisitReserveResponse" message="tns:IElMokhtabarService_HomeVisitReserve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PromotionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/PromotionList" message="tns:IElMokhtabarService_PromotionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/PromotionListResponse" message="tns:IElMokhtabarService_PromotionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PromotionGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/PromotionGet" message="tns:IElMokhtabarService_PromotionGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/PromotionGetResponse" message="tns:IElMokhtabarService_PromotionGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/NewsList" message="tns:IElMokhtabarService_NewsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/NewsListResponse" message="tns:IElMokhtabarService_NewsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/NewsGet" message="tns:IElMokhtabarService_NewsGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/NewsGetResponse" message="tns:IElMokhtabarService_NewsGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestResultList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/TestResultList" message="tns:IElMokhtabarService_TestResultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/TestResultListResponse" message="tns:IElMokhtabarService_TestResultList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorporateTestResultList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/CorporateTestResultList" message="tns:IElMokhtabarService_CorporateTestResultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/CorporateTestResultListResponse" message="tns:IElMokhtabarService_CorporateTestResultList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorporateDetailsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/CorporateDetailsList" message="tns:IElMokhtabarService_CorporateDetailsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/CorporateDetailsListResponse" message="tns:IElMokhtabarService_CorporateDetailsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestResultGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/TestResultGet" message="tns:IElMokhtabarService_TestResultGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/TestResultGetResponse" message="tns:IElMokhtabarService_TestResultGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTestResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/SendTestResult" message="tns:IElMokhtabarService_SendTestResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/SendTestResultResponse" message="tns:IElMokhtabarService_SendTestResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/CountryList" message="tns:IElMokhtabarService_CountryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/CountryListResponse" message="tns:IElMokhtabarService_CountryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CountryGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/CountryGet" message="tns:IElMokhtabarService_CountryGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/CountryGetResponse" message="tns:IElMokhtabarService_CountryGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProvinceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/ProvinceList" message="tns:IElMokhtabarService_ProvinceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/ProvinceListResponse" message="tns:IElMokhtabarService_ProvinceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProvinceGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/ProvinceGet" message="tns:IElMokhtabarService_ProvinceGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/ProvinceGetResponse" message="tns:IElMokhtabarService_ProvinceGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AreaList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/AreaList" message="tns:IElMokhtabarService_AreaList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/AreaListResponse" message="tns:IElMokhtabarService_AreaList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AreaGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/AreaGet" message="tns:IElMokhtabarService_AreaGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/AreaGetResponse" message="tns:IElMokhtabarService_AreaGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PatientTestResults">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/PatientTestResults" message="tns:IElMokhtabarService_PatientTestResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/PatientTestResultsResponse" message="tns:IElMokhtabarService_PatientTestResults_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrecautions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/GetPrecautions" message="tns:IElMokhtabarService_GetPrecautions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/GetPrecautionsResponse" message="tns:IElMokhtabarService_GetPrecautions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUpdated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/IsUpdated" message="tns:IElMokhtabarService_IsUpdated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/IsUpdatedResponse" message="tns:IElMokhtabarService_IsUpdated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotifications">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/GetNotifications" message="tns:IElMokhtabarService_GetNotifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/GetNotificationsResponse" message="tns:IElMokhtabarService_GetNotifications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/UpdateToken" message="tns:IElMokhtabarService_UpdateToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/UpdateTokenResponse" message="tns:IElMokhtabarService_UpdateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNotificationStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/UpdateNotificationStatus" message="tns:IElMokhtabarService_UpdateNotificationStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/UpdateNotificationStatusResponse" message="tns:IElMokhtabarService_UpdateNotificationStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetDeviceBadge">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/ResetDeviceBadge" message="tns:IElMokhtabarService_ResetDeviceBadge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/ResetDeviceBadgeResponse" message="tns:IElMokhtabarService_ResetDeviceBadge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewNotification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/AddNewNotification" message="tns:IElMokhtabarService_AddNewNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/AddNewNotificationResponse" message="tns:IElMokhtabarService_AddNewNotification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/GenerateCode" message="tns:IElMokhtabarService_GenerateCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/GenerateCodeResponse" message="tns:IElMokhtabarService_GenerateCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTestAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DeleteTestAccount" message="tns:IElMokhtabarService_DeleteTestAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DeleteTestAccountResponse" message="tns:IElMokhtabarService_DeleteTestAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HealthAwarenessCampaignList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthAwarenessCampaignList" message="tns:IElMokhtabarService_HealthAwarenessCampaignList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/HealthAwarenessCampaignListResponse" message="tns:IElMokhtabarService_HealthAwarenessCampaignList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsletterList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/NewsletterList" message="tns:IElMokhtabarService_NewsletterList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/NewsletterListResponse" message="tns:IElMokhtabarService_NewsletterList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CorporateList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/CorporateList" message="tns:IElMokhtabarService_CorporateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/CorporateListResponse" message="tns:IElMokhtabarService_CorporateList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetRegisteredData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetRegisteredData" message="tns:IElMokhtabarService_DoGetRegisteredData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetRegisteredDataResponse" message="tns:IElMokhtabarService_DoGetRegisteredData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoUpdateRegisteredData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpdateRegisteredData" message="tns:IElMokhtabarService_DoUpdateRegisteredData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpdateRegisteredDataResponse" message="tns:IElMokhtabarService_DoUpdateRegisteredData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoUpdatePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpdatePassword" message="tns:IElMokhtabarService_DoUpdatePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpdatePasswordResponse" message="tns:IElMokhtabarService_DoUpdatePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoUpdateProfileRegisteredData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpdateProfileRegisteredData" message="tns:IElMokhtabarService_DoUpdateProfileRegisteredData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpdateProfileRegisteredDataResponse" message="tns:IElMokhtabarService_DoUpdateProfileRegisteredData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSetUserDiabetes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSetUserDiabetes" message="tns:IElMokhtabarService_DoSetUserDiabetes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSetUserDiabetesResponse" message="tns:IElMokhtabarService_DoSetUserDiabetes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetDiabetesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetDiabetesList" message="tns:IElMokhtabarService_DoGetDiabetesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetDiabetesListResponse" message="tns:IElMokhtabarService_DoGetDiabetesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSelectedDiabetesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSelectedDiabetesList" message="tns:IElMokhtabarService_DoSelectedDiabetesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSelectedDiabetesListResponse" message="tns:IElMokhtabarService_DoSelectedDiabetesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetPatientPoints">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetPatientPoints" message="tns:IElMokhtabarService_DoGetPatientPoints_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetPatientPointsResponse" message="tns:IElMokhtabarService_DoGetPatientPoints_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSendInquiry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendInquiry" message="tns:IElMokhtabarService_DoSendInquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendInquiryResponse" message="tns:IElMokhtabarService_DoSendInquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSendFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendFeedback" message="tns:IElMokhtabarService_DoSendFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendFeedbackResponse" message="tns:IElMokhtabarService_DoSendFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUpload" message="tns:IElMokhtabarService_DoUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoUploadResponse" message="tns:IElMokhtabarService_DoUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTests">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/GetTests" message="tns:IElMokhtabarService_GetTests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/GetTestsResponse" message="tns:IElMokhtabarService_GetTests_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoPatientTestResultsReciept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoPatientTestResultsReciept" message="tns:IElMokhtabarService_DoPatientTestResultsReciept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoPatientTestResultsRecieptResponse" message="tns:IElMokhtabarService_DoPatientTestResultsReciept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetClientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetClientList" message="tns:IElMokhtabarService_DoGetClientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetClientListResponse" message="tns:IElMokhtabarService_DoGetClientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetCompaniesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetCompaniesList" message="tns:IElMokhtabarService_DoGetCompaniesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetCompaniesListResponse" message="tns:IElMokhtabarService_DoGetCompaniesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetChemistCompaniesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetChemistCompaniesList" message="tns:IElMokhtabarService_DoGetChemistCompaniesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetChemistCompaniesListResponse" message="tns:IElMokhtabarService_DoGetChemistCompaniesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetChemistTariffList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetChemistTariffList" message="tns:IElMokhtabarService_DoGetChemistTariffList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetChemistTariffListResponse" message="tns:IElMokhtabarService_DoGetChemistTariffList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetChemistTestList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetChemistTestList" message="tns:IElMokhtabarService_DoGetChemistTestList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetChemistTestListResponse" message="tns:IElMokhtabarService_DoGetChemistTestList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetTestPricesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetTestPricesList" message="tns:IElMokhtabarService_DoGetTestPricesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetTestPricesListResponse" message="tns:IElMokhtabarService_DoGetTestPricesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetVisitDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetVisitDetails" message="tns:IElMokhtabarService_DoGetVisitDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetVisitDetailsResponse" message="tns:IElMokhtabarService_DoGetVisitDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetBranchesVisits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetBranchesVisits" message="tns:IElMokhtabarService_DoGetBranchesVisits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetBranchesVisitsResponse" message="tns:IElMokhtabarService_DoGetBranchesVisits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSendPatientInquiry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendPatientInquiry" message="tns:IElMokhtabarService_DoSendPatientInquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendPatientInquiryResponse" message="tns:IElMokhtabarService_DoSendPatientInquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetMessageReplyDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetMessageReplyDetails" message="tns:IElMokhtabarService_DoGetMessageReplyDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetMessageReplyDetailsResponse" message="tns:IElMokhtabarService_DoGetMessageReplyDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetVisitMessagesList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetVisitMessagesList" message="tns:IElMokhtabarService_DoGetVisitMessagesList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetVisitMessagesListResponse" message="tns:IElMokhtabarService_DoGetVisitMessagesList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoVisitTestResultList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoVisitTestResultList" message="tns:IElMokhtabarService_DoVisitTestResultList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoVisitTestResultListResponse" message="tns:IElMokhtabarService_DoVisitTestResultList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetThreads">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetThreads" message="tns:IElMokhtabarService_DoGetThreads_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetThreadsResponse" message="tns:IElMokhtabarService_DoGetThreads_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGetThreadMessagess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetThreadMessagess" message="tns:IElMokhtabarService_DoGetThreadMessagess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoGetThreadMessagessResponse" message="tns:IElMokhtabarService_DoGetThreadMessagess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoSendMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendMessage" message="tns:IElMokhtabarService_DoSendMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IElMokhtabarService/DoSendMessageResponse" message="tns:IElMokhtabarService_DoSendMessage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ElMokhtabarService" />
+</wsdl:definitions>

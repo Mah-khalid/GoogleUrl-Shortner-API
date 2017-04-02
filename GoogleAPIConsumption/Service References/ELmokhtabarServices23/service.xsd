@@ -1,0 +1,1039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" />
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="Registeration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q1:RegisterationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="RegisterationResult" nillable="true" type="q2:RegisterationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterationFB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="request" type="q3:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterationFBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="RegisterationFBResult" nillable="true" type="q4:RegisterationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestLibrary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q5:TestLibraryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestLibraryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="TestLibraryResult" nillable="true" type="q6:TestLibraryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyWebLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q7:VerifyWebLoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerifyWebLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="VerifyWebLoginResult" nillable="true" type="q8:LoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserVerify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q9:UserVerifyRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserVerifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="UserVerifyResult" nillable="true" type="q10:UserVerifyResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginFB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q11:LoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginFBResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="LoginFBResult" nillable="true" type="q12:LoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q13:LoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="LoginResult" nillable="true" type="q14:LoginResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Logout">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q15:LogoutRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogoutResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="LogoutResult" nillable="true" type="q16:LogoutResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForgetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q17:ForgetPasswordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForgetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="ForgetPasswordResult" nillable="true" type="q18:ForgetPasswordResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q19:ResetPasswordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="ResetPasswordResult" nillable="true" type="q20:ResetPasswordResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetBadgeCounter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q21:ResetBadgeCounterRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetBadgeCounterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="ResetBadgeCounterResult" nillable="true" type="q22:ResetBadgeCounterResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BranchList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q23:BranchListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BranchListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="BranchListResult" nillable="true" type="q24:BranchListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BranchGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q25:BranchRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BranchGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="BranchGetResult" nillable="true" type="q26:BranchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsCategoryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q27:HealthTipsCategoryListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsCategoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="HealthTipsCategoryListResult" nillable="true" type="q28:HealthTipsCategoryListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsCategoryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q29:HealthTipsCategoryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsCategoryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="HealthTipsCategoryGetResult" nillable="true" type="q30:HealthTipsCategoryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q31:HealthTipsListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="HealthTipsListResult" nillable="true" type="q32:HealthTipsListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q33:HealthTipsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthTipsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="HealthTipsGetResult" nillable="true" type="q34:HealthTipsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HomeVisitReserve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.microsoft.com/Message" name="request" type="q35:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HomeVisitReserveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="HomeVisitReserveResult" nillable="true" type="q36:HomeVisitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PromotionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q37:PromotionListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PromotionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="PromotionListResult" nillable="true" type="q38:PromotionListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PromotionGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q39:PromotionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PromotionGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="PromotionGetResult" nillable="true" type="q40:PromotionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q41:NewsListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="NewsListResult" nillable="true" type="q42:NewsListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewsGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q43:NewsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewsGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="NewsGetResult" nillable="true" type="q44:NewsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResultList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q45:TestResultListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResultListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="TestResultListResult" nillable="true" type="q46:TestResultListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorporateTestResultList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q47:CorporateTestResultListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorporateTestResultListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="CorporateTestResultListResult" nillable="true" type="q48:TestResultListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorporateDetailsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q49:TestResultListRequestCorporate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorporateDetailsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="CorporateDetailsListResult" nillable="true" type="q50:CorporateDetailsListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResultGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q51:TestResultRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResultGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="TestResultGetResult" nillable="true" type="q52:TestResultResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTestResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q53:SendTestResultRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendTestResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="SendTestResultResult" nillable="true" type="q54:SendTestResultResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q55:CountryListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="CountryListResult" nillable="true" type="q56:CountryListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q57:CountryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CountryGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="CountryGetResult" nillable="true" type="q58:CountryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProvinceList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q59:ProvinceListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProvinceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="ProvinceListResult" nillable="true" type="q60:ProvinceListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProvinceGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q61:ProvinceRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProvinceGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="ProvinceGetResult" nillable="true" type="q62:ProvinceResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AreaList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q63:AreaListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AreaListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="AreaListResult" nillable="true" type="q64:AreaListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AreaGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q65:AreaRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AreaGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="AreaGetResult" nillable="true" type="q66:AreaResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PatientTestResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q67:PatientTestResultsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PatientTestResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="PatientTestResultsResult" nillable="true" type="q68:PatientTestResultsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrecautions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q69:BaseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPrecautionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="GetPrecautionsResult" nillable="true" type="q70:PrecautionsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUpdated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q71:IsUpdatedRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUpdatedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="IsUpdatedResult" nillable="true" type="q72:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotifications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q73:NotificationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotificationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="GetNotificationsResult" nillable="true" type="q74:NotificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q75:UpdateTokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="UpdateTokenResult" nillable="true" type="q76:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q77:UpdateNotificationStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNotificationStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="UpdateNotificationStatusResult" nillable="true" type="q78:UpdateNotificationStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetDeviceBadge">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q79:UpdateTokenRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResetDeviceBadgeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="ResetDeviceBadgeResult" nillable="true" type="q80:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q81:AddNotificationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewNotificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="AddNewNotificationResult" nillable="true" type="q82:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q83:GenerateCodeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="GenerateCodeResult" nillable="true" type="q84:GenerateCodeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTestAccount">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTestAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DeleteTestAccountResult" nillable="true" type="q85:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthAwarenessCampaignList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q86:PromotionListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HealthAwarenessCampaignListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="HealthAwarenessCampaignListResult" nillable="true" type="q87:HealthAwarenessCampaignListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewsletterList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q88:NewsletterListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewsletterListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="NewsletterListResult" nillable="true" type="q89:NewsletterListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorporateList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q90:PromotionListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CorporateListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="CorporateListResult" nillable="true" type="q91:CorporateListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetRegisteredData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q92:GetRegisteredDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetRegisteredDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetRegisteredDataResult" nillable="true" type="q93:GetRegisteredDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpdateRegisteredData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q94:UpdateRegisteredDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpdateRegisteredDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoUpdateRegisteredDataResult" nillable="true" type="q95:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpdatePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q96:UpdatePasswordRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpdatePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoUpdatePasswordResult" nillable="true" type="q97:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpdateProfileRegisteredData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q98:UpdateRegisteredDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpdateProfileRegisteredDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoUpdateProfileRegisteredDataResult" nillable="true" type="q99:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSetUserDiabetes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q100:SetUserDiabetesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSetUserDiabetesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoSetUserDiabetesResult" nillable="true" type="q101:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetDiabetesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q102:GetDiabetesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetDiabetesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetDiabetesListResult" nillable="true" type="q103:GetDiabetesListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSelectedDiabetesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q104:GetDiabetesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSelectedDiabetesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoSelectedDiabetesListResult" nillable="true" type="q105:GetSelectedDiabetesListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetPatientPoints">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q106:PatientPointsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetPatientPointsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetPatientPointsResult" nillable="true" type="q107:PatientPointsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendInquiry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.microsoft.com/Message" name="data" type="q108:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendInquiryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoSendInquiryResult" nillable="true" type="q109:SendInquiryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendFeedback">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="data" nillable="true" type="q110:SendFeedbackRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendFeedbackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoSendFeedbackResult" nillable="true" type="q111:SendFeedbackResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q112:FileUpload" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUploadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoUploadResult" nillable="true" type="q113:FileUploadResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTests">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="data" nillable="true" type="q114:TestsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="GetTestsResult" nillable="true" type="q115:TestsListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoPatientTestResultsReciept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="data" nillable="true" type="q116:LoginRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoPatientTestResultsRecieptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoPatientTestResultsRecieptResult" nillable="true" type="q117:TestResultListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetClientList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q118:ClientListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetClientListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetClientListResult" nillable="true" type="q119:ClientListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetCompaniesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q120:CompaniesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetCompaniesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetCompaniesListResult" nillable="true" type="q121:CompaniesListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetChemistCompaniesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q122:CompaniesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetChemistCompaniesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetChemistCompaniesListResult" nillable="true" type="q123:CompaniesListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetChemistTariffList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q124:TariffListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetChemistTariffListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetChemistTariffListResult" nillable="true" type="q125:TariffListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetChemistTestList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q126:ChemistTestPricesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetChemistTestListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetChemistTestListResult" nillable="true" type="q127:ChemistTestPricesListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetTestPricesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q128:TestPricesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetTestPricesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetTestPricesListResult" nillable="true" type="q129:TestPricesListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetVisitDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q130:VisitDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetVisitDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetVisitDetailsResult" nillable="true" type="q131:VisitDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetBranchesVisits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q132:BranchesVisitsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetBranchesVisitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetBranchesVisitsResult" nillable="true" type="q133:BranchesVisitsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendPatientInquiry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q134:SendPatientInquiryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendPatientInquiryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoSendPatientInquiryResult" nillable="true" type="q135:BaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetMessageReplyDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q136:MessageReplyDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetMessageReplyDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetMessageReplyDetailsResult" nillable="true" type="q137:MessageReplyDetailsResonse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetVisitMessagesList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q138:VisitMessagesListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetVisitMessagesListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetVisitMessagesListResult" nillable="true" type="q139:VisitMessagesListResonse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoVisitTestResultList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q140:VisitTestResultListRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoVisitTestResultListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoVisitTestResultListResult" nillable="true" type="q141:TestResultListResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetThreads">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q142:CHATRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetThreadsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetThreadsResult" nillable="true" type="q143:CHATResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetThreadMessagess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q144:ThreadMessagesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoGetThreadMessagessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoGetThreadMessagessResult" nillable="true" type="q145:ThreadMessagesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="request" nillable="true" type="q146:SendMessageRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoSendMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" minOccurs="0" name="DoSendMessageResult" nillable="true" type="q147:SendMessageResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

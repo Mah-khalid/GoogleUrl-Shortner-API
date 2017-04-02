@@ -1,0 +1,1790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Kryptonworx.ElMokhtabar.UI.Service.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="RegisterationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsDoctor" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Speciality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="xs:int" />
+          <xs:element minOccurs="0" name="Vip_number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="areaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="deviceTokeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="gender" type="xs:boolean" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="patientID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterationRequest" nillable="true" type="tns:RegisterationRequest" />
+  <xs:complexType name="BaseRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="mobileNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseRequest" nillable="true" type="tns:BaseRequest" />
+  <xs:complexType name="RegisterationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="User_id" type="ser:guid" />
+          <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegisterationResponse" nillable="true" type="tns:RegisterationResponse" />
+  <xs:complexType name="BaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Missing" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="errorCode" type="xs:long">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="isSuccess" nillable="true" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseResponse" nillable="true" type="tns:BaseResponse" />
+  <xs:complexType name="TestLibraryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TestName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestLibraryRequest" nillable="true" type="tns:TestLibraryRequest" />
+  <xs:complexType name="TestLibraryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Tests" nillable="true" type="tns:ArrayOfTestLibrary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestLibraryResponse" nillable="true" type="tns:TestLibraryResponse" />
+  <xs:complexType name="ArrayOfTestLibrary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestLibrary" nillable="true" type="tns:TestLibrary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestLibrary" nillable="true" type="tns:ArrayOfTestLibrary" />
+  <xs:complexType name="TestLibrary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Precautions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sample_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Test_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Turn_Arround_Time" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestLibrary" nillable="true" type="tns:TestLibrary" />
+  <xs:complexType name="VerifyWebLoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VerifyWebLoginRequest" nillable="true" type="tns:VerifyWebLoginRequest" />
+  <xs:complexType name="LoginResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Education" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsBranch" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsChemist" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsDoctor" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsEmployee" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFirstTime" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PhotoPath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValidDoctor" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Vip_number" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mobileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="patCode" type="xs:int" />
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginResponse" nillable="true" type="tns:LoginResponse" />
+  <xs:complexType name="UserVerifyRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserVerifyRequest" nillable="true" type="tns:UserVerifyRequest" />
+  <xs:complexType name="UserVerifyResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UserVerifyResponse" nillable="true" type="tns:UserVerifyResponse" />
+  <xs:complexType name="LoginRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FB_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="deviceTokeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginRequest" nillable="true" type="tns:LoginRequest" />
+  <xs:complexType name="LogoutRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="deviceTokeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogoutRequest" nillable="true" type="tns:LogoutRequest" />
+  <xs:complexType name="LogoutResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LogoutResponse" nillable="true" type="tns:LogoutResponse" />
+  <xs:complexType name="ForgetPasswordRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgetPasswordRequest" nillable="true" type="tns:ForgetPasswordRequest" />
+  <xs:complexType name="ForgetPasswordResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ForgetPasswordResponse" nillable="true" type="tns:ForgetPasswordResponse" />
+  <xs:complexType name="ResetPasswordRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="deviceTokeID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="resetId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetPasswordRequest" nillable="true" type="tns:ResetPasswordRequest" />
+  <xs:complexType name="ResetPasswordResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="fullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="mobileNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetPasswordResponse" nillable="true" type="tns:ResetPasswordResponse" />
+  <xs:complexType name="ResetBadgeCounterRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="deviceTokeID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetBadgeCounterRequest" nillable="true" type="tns:ResetBadgeCounterRequest" />
+  <xs:complexType name="ResetBadgeCounterResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ResetBadgeCounterResponse" nillable="true" type="tns:ResetBadgeCounterResponse" />
+  <xs:complexType name="BranchListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="areaId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="countryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="geoLat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="geoLong" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="provinceId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchListRequest" nillable="true" type="tns:BranchListRequest" />
+  <xs:complexType name="BranchListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="branches" nillable="true" type="tns:ArrayOfBranchResponse.Branch" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchListResponse" nillable="true" type="tns:BranchListResponse" />
+  <xs:complexType name="ArrayOfBranchResponse.Branch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BranchResponse.Branch" nillable="true" type="tns:BranchResponse.Branch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranchResponse.Branch" nillable="true" type="tns:ArrayOfBranchResponse.Branch" />
+  <xs:complexType name="BranchResponse.Branch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AreaID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contacts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeoDistance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeoLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvinceID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BranchResponse.Branch" nillable="true" type="tns:BranchResponse.Branch" />
+  <xs:complexType name="BranchRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchRequest" nillable="true" type="tns:BranchRequest" />
+  <xs:complexType name="BranchResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="branch" nillable="true" type="tns:BranchResponse.Branch" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchResponse" nillable="true" type="tns:BranchResponse" />
+  <xs:complexType name="HealthTipsCategoryListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsCategoryListRequest" nillable="true" type="tns:HealthTipsCategoryListRequest" />
+  <xs:complexType name="HealthTipsCategoryListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="healthTipsCategories" nillable="true" type="tns:ArrayOfHealthTipsCategoryResponse.HealthTipsCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsCategoryListResponse" nillable="true" type="tns:HealthTipsCategoryListResponse" />
+  <xs:complexType name="ArrayOfHealthTipsCategoryResponse.HealthTipsCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HealthTipsCategoryResponse.HealthTipsCategory" nillable="true" type="tns:HealthTipsCategoryResponse.HealthTipsCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHealthTipsCategoryResponse.HealthTipsCategory" nillable="true" type="tns:ArrayOfHealthTipsCategoryResponse.HealthTipsCategory" />
+  <xs:complexType name="HealthTipsCategoryResponse.HealthTipsCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImageFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HealthTipsCategoryResponse.HealthTipsCategory" nillable="true" type="tns:HealthTipsCategoryResponse.HealthTipsCategory" />
+  <xs:complexType name="HealthTipsCategoryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsCategoryRequest" nillable="true" type="tns:HealthTipsCategoryRequest" />
+  <xs:complexType name="HealthTipsCategoryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="healthTipsCategory" nillable="true" type="tns:HealthTipsCategoryResponse.HealthTipsCategory" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsCategoryResponse" nillable="true" type="tns:HealthTipsCategoryResponse" />
+  <xs:complexType name="HealthTipsListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="categoryId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsListRequest" nillable="true" type="tns:HealthTipsListRequest" />
+  <xs:complexType name="HealthTipsListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="healthTips" nillable="true" type="tns:ArrayOfHealthTipsResponse.HealthTips" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsListResponse" nillable="true" type="tns:HealthTipsListResponse" />
+  <xs:complexType name="ArrayOfHealthTipsResponse.HealthTips">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HealthTipsResponse.HealthTips" nillable="true" type="tns:HealthTipsResponse.HealthTips" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHealthTipsResponse.HealthTips" nillable="true" type="tns:ArrayOfHealthTipsResponse.HealthTips" />
+  <xs:complexType name="HealthTipsResponse.HealthTips">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BigDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HealthTipLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HealthTipsCategoryID" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImageFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HealthTipsResponse.HealthTips" nillable="true" type="tns:HealthTipsResponse.HealthTips" />
+  <xs:complexType name="HealthTipsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsRequest" nillable="true" type="tns:HealthTipsRequest" />
+  <xs:complexType name="HealthTipsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="healthTips" nillable="true" type="tns:HealthTipsResponse.HealthTips" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthTipsResponse" nillable="true" type="tns:HealthTipsResponse" />
+  <xs:complexType name="HomeVisitResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HomeVisitResponse" nillable="true" type="tns:HomeVisitResponse" />
+  <xs:complexType name="PromotionListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PromotionListRequest" nillable="true" type="tns:PromotionListRequest" />
+  <xs:complexType name="PromotionListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="promotions" nillable="true" type="tns:ArrayOfPromotionResponse.Promotion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PromotionListResponse" nillable="true" type="tns:PromotionListResponse" />
+  <xs:complexType name="ArrayOfPromotionResponse.Promotion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PromotionResponse.Promotion" nillable="true" type="tns:PromotionResponse.Promotion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPromotionResponse.Promotion" nillable="true" type="tns:ArrayOfPromotionResponse.Promotion" />
+  <xs:complexType name="PromotionResponse.Promotion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BigDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImageFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PromotionLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PromotionResponse.Promotion" nillable="true" type="tns:PromotionResponse.Promotion" />
+  <xs:complexType name="PromotionRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PromotionRequest" nillable="true" type="tns:PromotionRequest" />
+  <xs:complexType name="PromotionResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="promotion" nillable="true" type="tns:PromotionResponse.Promotion" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PromotionResponse" nillable="true" type="tns:PromotionResponse" />
+  <xs:complexType name="NewsListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsListRequest" nillable="true" type="tns:NewsListRequest" />
+  <xs:complexType name="NewsListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="news" nillable="true" type="tns:ArrayOfNewsResponse.News" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsListResponse" nillable="true" type="tns:NewsListResponse" />
+  <xs:complexType name="ArrayOfNewsResponse.News">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NewsResponse.News" nillable="true" type="tns:NewsResponse.News" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNewsResponse.News" nillable="true" type="tns:ArrayOfNewsResponse.News" />
+  <xs:complexType name="NewsResponse.News">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BigDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImageFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MinDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewsResponse.News" nillable="true" type="tns:NewsResponse.News" />
+  <xs:complexType name="NewsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsRequest" nillable="true" type="tns:NewsRequest" />
+  <xs:complexType name="NewsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="news" nillable="true" type="tns:NewsResponse.News" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsResponse" nillable="true" type="tns:NewsResponse" />
+  <xs:complexType name="TestResultListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="ser:guid" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="lastID" type="xs:long" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestResultListRequest" nillable="true" type="tns:TestResultListRequest" />
+  <xs:complexType name="TestResultListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="testResultVisits" nillable="true" type="tns:ArrayOfTestResultListResponse.TestResultVisit" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestResultListResponse" nillable="true" type="tns:TestResultListResponse" />
+  <xs:complexType name="ArrayOfTestResultListResponse.TestResultVisit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestResultListResponse.TestResultVisit" nillable="true" type="tns:TestResultListResponse.TestResultVisit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestResultListResponse.TestResultVisit" nillable="true" type="tns:ArrayOfTestResultListResponse.TestResultVisit" />
+  <xs:complexType name="TestResultListResponse.TestResultVisit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VisitNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="testResults" nillable="true" type="tns:ArrayOfTestResultResponse.TestResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestResultListResponse.TestResultVisit" nillable="true" type="tns:TestResultListResponse.TestResultVisit" />
+  <xs:complexType name="ArrayOfTestResultResponse.TestResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestResultResponse.TestResult" nillable="true" type="tns:TestResultResponse.TestResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestResultResponse.TestResult" nillable="true" type="tns:ArrayOfTestResultResponse.TestResult" />
+  <xs:complexType name="TestResultResponse.TestResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateAdded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultFile" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestResultResponse.TestResult" nillable="true" type="tns:TestResultResponse.TestResult" />
+  <xs:complexType name="CorporateTestResultListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermNo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CorporateTestResultListRequest" nillable="true" type="tns:CorporateTestResultListRequest" />
+  <xs:complexType name="TestResultListRequestCorporate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VstCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestResultListRequestCorporate" nillable="true" type="tns:TestResultListRequestCorporate" />
+  <xs:complexType name="CorporateDetailsListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="corporateEmpsList" nillable="true" type="tns:ArrayOfCorporateDetailsListResponse.CorporateEmps" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CorporateDetailsListResponse" nillable="true" type="tns:CorporateDetailsListResponse" />
+  <xs:complexType name="ArrayOfCorporateDetailsListResponse.CorporateEmps">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CorporateDetailsListResponse.CorporateEmps" nillable="true" type="tns:CorporateDetailsListResponse.CorporateEmps" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCorporateDetailsListResponse.CorporateEmps" nillable="true" type="tns:ArrayOfCorporateDetailsListResponse.CorporateEmps" />
+  <xs:complexType name="CorporateDetailsListResponse.CorporateEmps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CorporateDetailsListResponse.CorporateEmps" nillable="true" type="tns:CorporateDetailsListResponse.CorporateEmps" />
+  <xs:complexType name="TestResultRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestResultRequest" nillable="true" type="tns:TestResultRequest" />
+  <xs:complexType name="TestResultResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="testResult" nillable="true" type="tns:TestResultResponse.TestResult" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestResultResponse" nillable="true" type="tns:TestResultResponse" />
+  <xs:complexType name="SendTestResultRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ResultLink" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TestResultID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToEmail" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendTestResultRequest" nillable="true" type="tns:SendTestResultRequest" />
+  <xs:complexType name="SendTestResultResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendTestResultResponse" nillable="true" type="tns:SendTestResultResponse" />
+  <xs:complexType name="CountryListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryListRequest" nillable="true" type="tns:CountryListRequest" />
+  <xs:complexType name="CountryListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="countries" nillable="true" type="tns:ArrayOfCountryResponse.Country" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryListResponse" nillable="true" type="tns:CountryListResponse" />
+  <xs:complexType name="ArrayOfCountryResponse.Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CountryResponse.Country" nillable="true" type="tns:CountryResponse.Country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCountryResponse.Country" nillable="true" type="tns:ArrayOfCountryResponse.Country" />
+  <xs:complexType name="CountryResponse.Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CountryResponse.Country" nillable="true" type="tns:CountryResponse.Country" />
+  <xs:complexType name="CountryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryRequest" nillable="true" type="tns:CountryRequest" />
+  <xs:complexType name="CountryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="country" nillable="true" type="tns:CountryResponse.Country" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CountryResponse" nillable="true" type="tns:CountryResponse" />
+  <xs:complexType name="ProvinceListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="countryId" type="xs:long" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProvinceListRequest" nillable="true" type="tns:ProvinceListRequest" />
+  <xs:complexType name="ProvinceListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="provinces" nillable="true" type="tns:ArrayOfProvinceResponse.Province" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProvinceListResponse" nillable="true" type="tns:ProvinceListResponse" />
+  <xs:complexType name="ArrayOfProvinceResponse.Province">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProvinceResponse.Province" nillable="true" type="tns:ProvinceResponse.Province" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProvinceResponse.Province" nillable="true" type="tns:ArrayOfProvinceResponse.Province" />
+  <xs:complexType name="ProvinceResponse.Province">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryId" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProvinceResponse.Province" nillable="true" type="tns:ProvinceResponse.Province" />
+  <xs:complexType name="ProvinceRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProvinceRequest" nillable="true" type="tns:ProvinceRequest" />
+  <xs:complexType name="ProvinceResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="province" nillable="true" type="tns:ProvinceResponse.Province" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProvinceResponse" nillable="true" type="tns:ProvinceResponse" />
+  <xs:complexType name="AreaListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="count" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="provinceId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AreaListRequest" nillable="true" type="tns:AreaListRequest" />
+  <xs:complexType name="AreaListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="areas" nillable="true" type="tns:ArrayOfAreaResponse.Area" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AreaListResponse" nillable="true" type="tns:AreaListResponse" />
+  <xs:complexType name="ArrayOfAreaResponse.Area">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AreaResponse.Area" nillable="true" type="tns:AreaResponse.Area" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAreaResponse.Area" nillable="true" type="tns:ArrayOfAreaResponse.Area" />
+  <xs:complexType name="AreaResponse.Area">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProvinceId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AreaResponse.Area" nillable="true" type="tns:AreaResponse.Area" />
+  <xs:complexType name="AreaRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AreaRequest" nillable="true" type="tns:AreaRequest" />
+  <xs:complexType name="AreaResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="area" nillable="true" type="tns:AreaResponse.Area" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AreaResponse" nillable="true" type="tns:AreaResponse" />
+  <xs:complexType name="PatientTestResultsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientTestResultsRequest" nillable="true" type="tns:PatientTestResultsRequest" />
+  <xs:complexType name="PatientTestResultsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllTestResults" nillable="true" type="tns:ArrayOfTestResultDetails" />
+          <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientTestResultsResponse" nillable="true" type="tns:PatientTestResultsResponse" />
+  <xs:complexType name="ArrayOfTestResultDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestResultDetails" nillable="true" type="tns:TestResultDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestResultDetails" nillable="true" type="tns:ArrayOfTestResultDetails" />
+  <xs:complexType name="TestResultDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportFormatNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestResultDetails" nillable="true" type="tns:TestResultDetails" />
+  <xs:complexType name="PrecautionsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PrecautionsBody" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PrecautionsResponse" nillable="true" type="tns:PrecautionsResponse" />
+  <xs:complexType name="IsUpdatedRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IsUpdatedRequest" nillable="true" type="tns:IsUpdatedRequest" />
+  <xs:complexType name="NotificationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NotificationRequest" nillable="true" type="tns:NotificationRequest" />
+  <xs:complexType name="NotificationResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Notifications" nillable="true" type="tns:ArrayOfNotificationDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NotificationResponse" nillable="true" type="tns:NotificationResponse" />
+  <xs:complexType name="ArrayOfNotificationDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NotificationDetails" nillable="true" type="tns:NotificationDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNotificationDetails" nillable="true" type="tns:ArrayOfNotificationDetails" />
+  <xs:complexType name="NotificationDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="IsSeen" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NotificationDetails" nillable="true" type="tns:NotificationDetails" />
+  <xs:complexType name="UpdateTokenRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Devicetoken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateTokenRequest" nillable="true" type="tns:UpdateTokenRequest" />
+  <xs:complexType name="UpdateNotificationStatusRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NotificationID" type="xs:long" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateNotificationStatusRequest" nillable="true" type="tns:UpdateNotificationStatusRequest" />
+  <xs:complexType name="UpdateNotificationStatusResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateNotificationStatusResponse" nillable="true" type="tns:UpdateNotificationStatusResponse" />
+  <xs:complexType name="AddNotificationRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DeviceToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="body" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddNotificationRequest" nillable="true" type="tns:AddNotificationRequest" />
+  <xs:complexType name="GenerateCodeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenerateCodeRequest" nillable="true" type="tns:GenerateCodeRequest" />
+  <xs:complexType name="GenerateCodeResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GenerateCodeResponse" nillable="true" type="tns:GenerateCodeResponse" />
+  <xs:complexType name="HealthAwarenessCampaignListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HealthAwarenessCampaigns" nillable="true" type="tns:ArrayOfHealthAwarenessCampaign" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HealthAwarenessCampaignListResponse" nillable="true" type="tns:HealthAwarenessCampaignListResponse" />
+  <xs:complexType name="ArrayOfHealthAwarenessCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HealthAwarenessCampaign" nillable="true" type="tns:HealthAwarenessCampaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHealthAwarenessCampaign" nillable="true" type="tns:ArrayOfHealthAwarenessCampaign" />
+  <xs:complexType name="HealthAwarenessCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ImageFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HealthAwarenessCampaign" nillable="true" type="tns:HealthAwarenessCampaign" />
+  <xs:complexType name="NewsletterListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Speciality" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsletterListRequest" nillable="true" type="tns:NewsletterListRequest" />
+  <xs:complexType name="NewsletterListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Newsletters" nillable="true" type="tns:ArrayOfNewsletter" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NewsletterListResponse" nillable="true" type="tns:NewsletterListResponse" />
+  <xs:complexType name="ArrayOfNewsletter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Newsletter" nillable="true" type="tns:Newsletter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNewsletter" nillable="true" type="tns:ArrayOfNewsletter" />
+  <xs:complexType name="Newsletter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Speciality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Newsletter" nillable="true" type="tns:Newsletter" />
+  <xs:complexType name="CorporateListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Corporates" nillable="true" type="tns:ArrayOfCorporate" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CorporateListResponse" nillable="true" type="tns:CorporateListResponse" />
+  <xs:complexType name="ArrayOfCorporate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Corporate" nillable="true" type="tns:Corporate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCorporate" nillable="true" type="tns:ArrayOfCorporate" />
+  <xs:complexType name="Corporate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Corporate" nillable="true" type="tns:Corporate" />
+  <xs:complexType name="GetRegisteredDataRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRegisteredDataRequest" nillable="true" type="tns:GetRegisteredDataRequest" />
+  <xs:complexType name="GetRegisteredDataResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PatientID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetRegisteredDataResponse" nillable="true" type="tns:GetRegisteredDataResponse" />
+  <xs:complexType name="UpdateRegisteredDataRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Education" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="birthDate" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdateRegisteredDataRequest" nillable="true" type="tns:UpdateRegisteredDataRequest" />
+  <xs:complexType name="UpdatePasswordRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NewPassword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="UpdatePasswordRequest" nillable="true" type="tns:UpdatePasswordRequest" />
+  <xs:complexType name="SetUserDiabetesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DiabetesList" nillable="true" type="tns:ArrayOfDiabeteDetails" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+          <xs:element minOccurs="0" name="otherText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SetUserDiabetesRequest" nillable="true" type="tns:SetUserDiabetesRequest" />
+  <xs:complexType name="ArrayOfDiabeteDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiabeteDetails" nillable="true" type="tns:DiabeteDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiabeteDetails" nillable="true" type="tns:ArrayOfDiabeteDetails" />
+  <xs:complexType name="DiabeteDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiabeteDetails" nillable="true" type="tns:DiabeteDetails" />
+  <xs:complexType name="GetDiabetesListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDiabetesListRequest" nillable="true" type="tns:GetDiabetesListRequest" />
+  <xs:complexType name="GetDiabetesListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DiabetesList" nillable="true" type="tns:ArrayOfDiabeteDetails" />
+          <xs:element minOccurs="0" name="otherText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetDiabetesListResponse" nillable="true" type="tns:GetDiabetesListResponse" />
+  <xs:complexType name="GetSelectedDiabetesListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DiabetesList" nillable="true" type="tns:ArrayOfDiabeteDetails" />
+          <xs:element minOccurs="0" name="otherText" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GetSelectedDiabetesListResponse" nillable="true" type="tns:GetSelectedDiabetesListResponse" />
+  <xs:complexType name="PatientPointsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientPointsRequest" nillable="true" type="tns:PatientPointsRequest" />
+  <xs:complexType name="PatientPointsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RAmount" type="xs:float" />
+          <xs:element minOccurs="0" name="RBalAmt" type="xs:float" />
+          <xs:element minOccurs="0" name="RPaidAmt" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PatientPointsResponse" nillable="true" type="tns:PatientPointsResponse" />
+  <xs:complexType name="SendInquiryResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendInquiryResponse" nillable="true" type="tns:SendInquiryResponse" />
+  <xs:complexType name="SendFeedbackRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MobileNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendFeedbackRequest" nillable="true" type="tns:SendFeedbackRequest" />
+  <xs:complexType name="SendFeedbackResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendFeedbackResponse" nillable="true" type="tns:SendFeedbackResponse" />
+  <xs:complexType name="FileUpload">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FileUpload" nillable="true" type="tns:FileUpload" />
+  <xs:complexType name="FileUploadResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FileUploadResponse" nillable="true" type="tns:FileUploadResponse" />
+  <xs:complexType name="TestsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lang" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestsRequest" nillable="true" type="tns:TestsRequest" />
+  <xs:complexType name="TestsListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="tests" nillable="true" type="tns:ArrayOfTestsResponse.Test" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestsListResponse" nillable="true" type="tns:TestsListResponse" />
+  <xs:complexType name="ArrayOfTestsResponse.Test">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestsResponse.Test" nillable="true" type="tns:TestsResponse.Test" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestsResponse.Test" nillable="true" type="tns:ArrayOfTestsResponse.Test" />
+  <xs:complexType name="TestsResponse.Test">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestsResponse.Test" nillable="true" type="tns:TestsResponse.Test" />
+  <xs:complexType name="ClientListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SearchQuery" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientListRequest" nillable="true" type="tns:ClientListRequest" />
+  <xs:complexType name="ClientListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllClients" nillable="true" type="tns:ArrayOfClientListDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ClientListResponse" nillable="true" type="tns:ClientListResponse" />
+  <xs:complexType name="ArrayOfClientListDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientListDetails" nillable="true" type="tns:ClientListDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientListDetails" nillable="true" type="tns:ArrayOfClientListDetails" />
+  <xs:complexType name="ClientListDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientListDetails" nillable="true" type="tns:ClientListDetails" />
+  <xs:complexType name="CompaniesListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SearchQuery" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompaniesListRequest" nillable="true" type="tns:CompaniesListRequest" />
+  <xs:complexType name="CompaniesListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllCompanies" nillable="true" type="tns:ArrayOfCenDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CompaniesListResponse" nillable="true" type="tns:CompaniesListResponse" />
+  <xs:complexType name="ArrayOfCenDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CenDetails" nillable="true" type="tns:CenDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCenDetails" nillable="true" type="tns:ArrayOfCenDetails" />
+  <xs:complexType name="CenDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CenCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CenDetails" nillable="true" type="tns:CenDetails" />
+  <xs:complexType name="TariffListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CenCode" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TariffListRequest" nillable="true" type="tns:TariffListRequest" />
+  <xs:complexType name="TariffListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllTariffes" nillable="true" type="tns:ArrayOfTariffDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TariffListResponse" nillable="true" type="tns:TariffListResponse" />
+  <xs:complexType name="ArrayOfTariffDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TariffDetails" nillable="true" type="tns:TariffDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTariffDetails" nillable="true" type="tns:ArrayOfTariffDetails" />
+  <xs:complexType name="TariffDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PriceList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TariffCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TariffDetails" nillable="true" type="tns:TariffDetails" />
+  <xs:complexType name="ChemistTestPricesListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TariffCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChemistTestPricesListRequest" nillable="true" type="tns:ChemistTestPricesListRequest" />
+  <xs:complexType name="ChemistTestPricesListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllTestPrices" nillable="true" type="tns:ArrayOfChemistTestPriceDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ChemistTestPricesListResponse" nillable="true" type="tns:ChemistTestPricesListResponse" />
+  <xs:complexType name="ArrayOfChemistTestPriceDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChemistTestPriceDetails" nillable="true" type="tns:ChemistTestPriceDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChemistTestPriceDetails" nillable="true" type="tns:ArrayOfChemistTestPriceDetails" />
+  <xs:complexType name="ChemistTestPriceDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAT" type="xs:int" />
+      <xs:element minOccurs="0" name="TestName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChemistTestPriceDetails" nillable="true" type="tns:ChemistTestPriceDetails" />
+  <xs:complexType name="TestPricesListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CenCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchQuery" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestPricesListRequest" nillable="true" type="tns:TestPricesListRequest" />
+  <xs:complexType name="TestPricesListResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllTestPrices" nillable="true" type="tns:ArrayOfTestPriceDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TestPricesListResponse" nillable="true" type="tns:TestPricesListResponse" />
+  <xs:complexType name="ArrayOfTestPriceDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestPriceDetails" nillable="true" type="tns:TestPriceDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestPriceDetails" nillable="true" type="tns:ArrayOfTestPriceDetails" />
+  <xs:complexType name="TestPriceDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PriceList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SampleType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TAT" type="xs:int" />
+      <xs:element minOccurs="0" name="TestName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestPriceDetails" nillable="true" type="tns:TestPriceDetails" />
+  <xs:complexType name="VisitDetailsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CVSTCODE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisitDetailsRequest" nillable="true" type="tns:VisitDetailsRequest" />
+  <xs:complexType name="VisitDetailsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllVisitDetails" nillable="true" type="tns:ArrayOfVisitDetailsModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisitDetailsResponse" nillable="true" type="tns:VisitDetailsResponse" />
+  <xs:complexType name="ArrayOfVisitDetailsModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisitDetailsModel" nillable="true" type="tns:VisitDetailsModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisitDetailsModel" nillable="true" type="tns:ArrayOfVisitDetailsModel" />
+  <xs:complexType name="VisitDetailsModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Branch" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CentreRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Client" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Discount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InsuranceRate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatSex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PermNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TariffName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Testname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Total_Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="vstdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vstdestination" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VisitDetailsModel" nillable="true" type="tns:VisitDetailsModel" />
+  <xs:complexType name="BranchesVisitsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BranchCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VstCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchesVisitsRequest" nillable="true" type="tns:BranchesVisitsRequest" />
+  <xs:complexType name="BranchesVisitsResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllbranchVisits" nillable="true" type="tns:ArrayOfBranchesVisitModel" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BranchesVisitsResponse" nillable="true" type="tns:BranchesVisitsResponse" />
+  <xs:complexType name="ArrayOfBranchesVisitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BranchesVisitModel" nillable="true" type="tns:BranchesVisitModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBranchesVisitModel" nillable="true" type="tns:ArrayOfBranchesVisitModel" />
+  <xs:complexType name="BranchesVisitModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="VstCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BranchesVisitModel" nillable="true" type="tns:BranchesVisitModel" />
+  <xs:complexType name="SendPatientInquiryRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="PatientMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VisitCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendPatientInquiryRequest" nillable="true" type="tns:SendPatientInquiryRequest" />
+  <xs:complexType name="MessageReplyDetailsRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MessageID" type="xs:long" />
+          <xs:element minOccurs="0" name="VisitCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MessageReplyDetailsRequest" nillable="true" type="tns:MessageReplyDetailsRequest" />
+  <xs:complexType name="MessageReplyDetailsResonse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Replay" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplayDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReplayUID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MessageReplyDetailsResonse" nillable="true" type="tns:MessageReplyDetailsResonse" />
+  <xs:complexType name="VisitMessagesListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="VisitCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisitMessagesListRequest" nillable="true" type="tns:VisitMessagesListRequest" />
+  <xs:complexType name="VisitMessagesListResonse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllVisitMessages" nillable="true" type="tns:ArrayOfVisitMessageDetails" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisitMessagesListResonse" nillable="true" type="tns:VisitMessagesListResonse" />
+  <xs:complexType name="ArrayOfVisitMessageDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VisitMessageDetails" nillable="true" type="tns:VisitMessageDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVisitMessageDetails" nillable="true" type="tns:ArrayOfVisitMessageDetails" />
+  <xs:complexType name="VisitMessageDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreationDateTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageID" type="xs:long" />
+      <xs:element minOccurs="0" name="PatMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VisitMessageDetails" nillable="true" type="tns:VisitMessageDetails" />
+  <xs:complexType name="VisitTestResultListRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="VisitCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="VisitTestResultListRequest" nillable="true" type="tns:VisitTestResultListRequest" />
+  <xs:complexType name="CHATRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAdmin" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="User_ID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CHATRequest" nillable="true" type="tns:CHATRequest" />
+  <xs:complexType name="CHATResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Threads" nillable="true" type="tns:ArrayOfTHREAD_DETAILS" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CHATResponse" nillable="true" type="tns:CHATResponse" />
+  <xs:complexType name="ArrayOfTHREAD_DETAILS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="THREAD_DETAILS" nillable="true" type="tns:THREAD_DETAILS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTHREAD_DETAILS" nillable="true" type="tns:ArrayOfTHREAD_DETAILS" />
+  <xs:complexType name="THREAD_DETAILS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IS_SEEN" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Last_modified_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Thread_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Thread_created_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="USER_ID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="THREAD_DETAILS" nillable="true" type="tns:THREAD_DETAILS" />
+  <xs:complexType name="ThreadMessagesRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Thread_ID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ThreadMessagesRequest" nillable="true" type="tns:ThreadMessagesRequest" />
+  <xs:complexType name="ThreadMessagesResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="messages" nillable="true" type="tns:ArrayOfChatMessages" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ThreadMessagesResponse" nillable="true" type="tns:ThreadMessagesResponse" />
+  <xs:complexType name="ArrayOfChatMessages">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ChatMessages" nillable="true" type="tns:ChatMessages" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChatMessages" nillable="true" type="tns:ArrayOfChatMessages" />
+  <xs:complexType name="ChatMessages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Is_admin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message_body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Message_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChatMessages" nillable="true" type="tns:ChatMessages" />
+  <xs:complexType name="SendMessageRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsAdmin" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSudan" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MessageBody" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Thread_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="User_ID" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendMessageRequest" nillable="true" type="tns:SendMessageRequest" />
+  <xs:complexType name="SendMessageResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Thread_ID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SendMessageResponse" nillable="true" type="tns:SendMessageResponse" />
+</xs:schema>
